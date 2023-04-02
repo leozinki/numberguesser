@@ -1,0 +1,47 @@
+
+<html>
+    <head>
+        <title>Guess the Number</title>
+        <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body style="margin: 0;">
+
+        <div id="menu">
+            
+            <div id="head">
+                Try to guess the number!
+            </div>
+            
+        </div>
+
+        <div class="flexx">
+            <span>
+                <label for="limite" id="limit">Limit:</label>
+                <select id="limite" name="limite">
+                    <option value="100">100</option>
+                    <option value="1000">1.000</option>
+                    <option value="10000">10.000</option>
+                    <option value="100000">100.000</option>
+                    <option value="1000000">1.000.000</option>
+                </select>
+            </span>
+            <span id="pontuacao">0</span>
+        </div>
+        
+        <div>
+            <button id="button" onclick="generateRandomNumber()">Generate Number</button>
+        </div>
+        <div id="input">
+            <input placeholder="Guess the number" id="guess" onkeydown="handleEnter(event)">
+        </div>
+        <div class="mobile-only" onclick="runGuess()">Submit</div>
+    </body>
+    <footer id="footer">
+        <div id="textExplain">By default, the number will be generated between 1 to 100</div>
+        <div id="isValid"></div>
+        <div id="numero">​ </div>
+        
+    </footer>
+    <script src="main.js"></script>
+</html>
